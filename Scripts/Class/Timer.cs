@@ -51,8 +51,9 @@ public class Timer{
 
             if (f_CurTime > f_TriggerTime)
             {
-                tick();
+                //b_Tricking must set false before tick() , cause if u want to restart in the tick() , b_Tricking would be reset to fasle .
                 b_Tricking = false;
+                tick();
             }
         }
     }
