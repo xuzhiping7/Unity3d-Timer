@@ -1,7 +1,3 @@
-using UnityEngine;
-using System;
-using System.Collections;
-
 //Coded by ZhipingXu  xuzhiping7@qq.com 
 //Too simple, so I do not need to explain, just see the code. Help yourself.
 
@@ -43,11 +39,11 @@ public class Timer{
     /// <summary>
     /// Update Time
     /// </summary>
-    public void Update()
+    public void Update(float deltaTime)
     {
         if (b_Tricking)
         {
-            f_CurTime += Time.deltaTime;
+            f_CurTime += deltaTime;
 
             if (f_CurTime > f_TriggerTime)
             {
@@ -57,7 +53,9 @@ public class Timer{
             }
         }
     }
+	
 
+	
     /// <summary>
     /// Stop the Timer
     /// </summary>
