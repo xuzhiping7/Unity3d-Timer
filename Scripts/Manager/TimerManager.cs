@@ -17,7 +17,13 @@ public class TimerManager : MonoBehaviour
 	void Update () {
         test.Update();
 	}
-
+	
+	//Some time u may need this to avoid conflict when re-init something , just a tip .
+	void OnDestory(){
+	    test.tick -= Test;
+        test.tick -= Test2;
+	}
+	
     void Test()
     {
         Debug.Log("1");
